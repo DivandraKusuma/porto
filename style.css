@@ -408,21 +408,17 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    color: #aaa;
-
+    transition: transform 0.3s;
 }
 
-.skill-box.ps {
-    color: #31a8ff;
+.skill-box img {
+    width: 40px;
+    height: 40px;
 }
 
-.skill-box.fg {
-    color: #a259ff;
-}
-
-.skill-box.html {
-    color: #e34c26;
+.skill-box:hover {
+    transform: translateY(-5px);
+    background-color: #333;
 }
 
 
@@ -506,22 +502,27 @@ footer {
 
 .project-visual {
     flex: 1;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 20px;
 }
 
-.project-visual::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(84, 74, 255, 0.1) 0%, transparent 70%);
+
+.project-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
+.project-card-large:hover .project-img {
+    transform: scale(1.05);
+}
 
 @media (max-width: 768px) {
     .navbar {
@@ -606,10 +607,10 @@ footer {
 
     .project-visual {
         min-height: auto;
-        padding: 20px;
+        padding: 10px;
         flex: 1;
         /* Take up less space */
-        max-width: 100px;
+        max-width: 130px;
         /* Constrain width */
         background: transparent;
         /* Remove gradient on small screens to fit */
@@ -620,9 +621,14 @@ footer {
         /* Remove fancy glow on mobile */
     }
 
+    .project-img {
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
     .project-visual i {
-        font-size: 2.5rem !important;
-        color: var(--primary-color) !important;
+        display: none;
     }
 
     .project-content {
