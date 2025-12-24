@@ -512,12 +512,16 @@ footer {
 
 
 .project-img {
-    width: 100%;
+    width: auto;
     height: auto;
-    max-width: 400px;
+    max-width: 100%;
+    max-height: 300px;
+    /* Constrain height to prevent super tall images */
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    object-fit: contain;
+    /* Ensure no distortion */
 }
 
 .project-card-large:hover .project-img {
