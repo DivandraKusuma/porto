@@ -449,49 +449,7 @@ footer {
 }
 
 
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .hero-content {
-        margin-top: 30px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .service-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .stats {
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .reasons-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cta-banner {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-}
-
-
+/* --- Featured Project (Phisfence) --- */
 .project-list.featured-project {
     flex-direction: row;
     justify-content: center;
@@ -564,13 +522,114 @@ footer {
     background: radial-gradient(circle, rgba(84, 74, 255, 0.1) 0%, transparent 70%);
 }
 
+
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        padding: 40px 5%;
+        min-height: auto;
+    }
+
+    .hero-content {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        max-width: 300px;
+        /* Limit size on mobile */
+        height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        /* Smaller heading */
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        /* Full width cards */
+        max-width: 350px;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        padding: 40px 5%;
+    }
+
+    .section-title-large {
+        font-size: 2.5rem;
+        /* Smaller decorative title */
+    }
+
+    .projects,
+    .testimonials,
+    .cta-banner,
+    .skills,
+    .why-hire {
+        padding: 60px 8%;
+    }
+
+    /* Project Card Mobile */
     .project-card-large {
         flex-direction: column-reverse;
-
+        max-width: 100%;
     }
 
     .project-visual {
-        padding: 40px;
+        min-height: 200px;
+        padding: 30px;
+    }
+
+    .project-visual i {
+        font-size: 3rem !important;
+    }
+
+    .project-content {
+        padding: 30px 20px;
+    }
+
+    .project-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .skill-icons {
+        flex-wrap: wrap;
     }
 }
