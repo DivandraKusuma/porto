@@ -162,7 +162,7 @@ ul {
     width: 350px;
     border-radius: 20px;
 
-    box-shadow: -20px -20px 0px rgba(84, 74, 255, 0.1), 20px 20px 0px rgba(84, 74, 255, 0.05);
+
 }
 
 
@@ -445,7 +445,7 @@ footer {
 }
 
 
-/* --- Featured Project (Phisfence) --- */
+
 .project-list.featured-project {
     flex-direction: row;
     justify-content: center;
@@ -515,13 +515,11 @@ footer {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 300px;
-    /* Constrain height to prevent super tall images */
+    max-height: 200px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
     object-fit: contain;
-    /* Ensure no distortion */
 }
 
 .project-card-large:hover .project-img {
@@ -561,13 +559,12 @@ footer {
     .image-wrapper img {
         width: 100%;
         max-width: 300px;
-        /* Limit size on mobile */
         height: auto;
     }
 
     .hero-content h1 {
         font-size: 2rem;
-        /* Smaller heading */
+        font-size: 2rem;
     }
 
     .service-cards {
@@ -577,7 +574,6 @@ footer {
 
     .card {
         width: 100%;
-        /* Full width cards */
         max-width: 350px;
     }
 
@@ -590,7 +586,7 @@ footer {
 
     .section-title-large {
         font-size: 2.5rem;
-        /* Smaller decorative title */
+        font-size: 2.5rem;
     }
 
     .projects,
@@ -601,10 +597,9 @@ footer {
         padding: 60px 8%;
     }
 
-    /* Project Card Mobile */
     .project-card-large {
         flex-direction: row-reverse;
-        /* Image Left, Text Right */
+        flex-direction: row-reverse;
         align-items: center;
         max-width: 100%;
     }
@@ -613,16 +608,19 @@ footer {
         min-height: auto;
         padding: 10px;
         flex: 1;
-        /* Take up less space */
+        flex: 1;
         max-width: 130px;
-        /* Constrain width */
+        max-width: 130px;
         background: transparent;
-        /* Remove gradient on small screens to fit */
+        background: transparent;
     }
 
     .project-visual::before {
         display: none;
-        /* Remove fancy glow on mobile */
+
+        .project-visual::before {
+            display: none;
+        }
     }
 
     .project-img {
