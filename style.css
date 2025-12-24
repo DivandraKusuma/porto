@@ -598,25 +598,57 @@ footer {
 
     /* Project Card Mobile */
     .project-card-large {
-        flex-direction: column-reverse;
+        flex-direction: row-reverse;
+        /* Image Left, Text Right */
+        align-items: center;
         max-width: 100%;
     }
 
     .project-visual {
-        min-height: 200px;
-        padding: 30px;
+        min-height: auto;
+        padding: 20px;
+        flex: 1;
+        /* Take up less space */
+        max-width: 100px;
+        /* Constrain width */
+        background: transparent;
+        /* Remove gradient on small screens to fit */
+    }
+
+    .project-visual::before {
+        display: none;
+        /* Remove fancy glow on mobile */
     }
 
     .project-visual i {
-        font-size: 3rem !important;
+        font-size: 2.5rem !important;
+        color: var(--primary-color) !important;
     }
 
     .project-content {
-        padding: 30px 20px;
+        padding: 20px;
+        flex: 2;
+        text-align: left;
     }
 
     .project-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .project-desc {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .tech-stack {
+        gap: 5px;
+    }
+
+    .tech-stack span {
+        font-size: 0.7rem;
+        padding: 3px 10px;
     }
 
     .reasons-grid {
